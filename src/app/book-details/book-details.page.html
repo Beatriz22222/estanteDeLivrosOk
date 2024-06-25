@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ book?.volumeInfo?.title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="book">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ book.volumeInfo.title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ book.volumeInfo.description }}</p>
+      <p><strong>Authors:</strong> {{ book.volumeInfo.authors?.join(', ') }}</p>
+      <p><strong>Published Date:</strong> {{ book.volumeInfo.publishedDate }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
